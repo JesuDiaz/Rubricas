@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reporte Base de Datos</title>
+</head>
+
+<body>
+    <h1>Tabla de los Cursos</h1>
+    <table>
+        <tr>
+            <th>Id Curso</th>
+            <th>Curso</th>
+            <th>Id Estudiante</th>
+        </tr>
+        {% for row in data1 %}
+        <tr>
+            <td>{{ row.Id_cursos }}</td>
+            <td>{{ row.nombre_curso }}</td>
+            <td>{{ row.Id_Estudiantes }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h1>Tabla de los Estudiantes</h1>
+    <table>
+        <tr>
+            <th>Id Estudiante</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+        </tr>
+        {% for row in data2 %}
+        <tr>
+            <td>{{ row.Id_Estudiantes }}</td>
+            <td>{{ row.nombre }}</td>
+            <td>{{ row.apellido }}</td>
+            <td>{{ row.edad }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
